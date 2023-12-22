@@ -1,0 +1,100 @@
+.container {
+    height: 435px;
+    width: 300px;
+    margin: auto;
+    border: 3px solid rgb(28, 28, 28);
+    background-color: rgb(28, 28, 28);
+    margin-top: 10%;
+    border-radius: 15px;
+  }
+
+  .inputs {
+    height: 75px;
+    width: 280px;
+    margin: auto;
+    border: 1px solid rgb(59, 58, 58);
+    background-color: rgb(59, 58, 58);
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .flex-row {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .flex-row div {
+    width: 25%;
+    height: 65px;
+  }
+
+  .btn-grid {
+    border: 1px solid white;
+
+  }
+
+  .top-row {
+    margin-top: 15px;
+  }
+
+  .btn {
+    margin: auto;
+    margin-top: 8.5px;
+    border: 1px solid rgb(91, 91, 91);
+    background-color: rgb(91, 91, 91);
+    height: 34px !important;
+    width: 47px !important;
+    border-radius: 50%;
+    box-shadow: 3px 3px 8px black;
+    text-align: center;
+    padding-top: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(214, 214, 214);
+    cursor: pointer;
+  }
+
+  .btn-equal {
+    margin: auto;
+    margin-top: 8.5px;
+    border: 1px solid rgb(212, 92, 12);
+    background-color: rgb(212, 92, 12);
+    height: 34px !important;
+    width: 47px !important;
+    border-radius: 50%;
+    box-shadow: 3px 3px 8px black;
+    text-align: center;
+    padding-top: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(214, 214, 214);
+    cursor: pointer;
+  }
+
+  .field {
+    text-align: right;
+    float: right;
+    height: 40px;
+    margin-top: 10px;
+    width: 255px;
+    padding-right: 10px;
+    font-size: x-large;
+    background-color: rgb(59, 58, 58);
+    border: 0;
+    color: rgb(214, 214, 214);
+ }
+
+ input.field:focus {
+    outline-width: 0;
+ }
+
+ .btn:active {
+    background-color: rgb(102, 102, 102);
+    box-shadow: 3px 3px 8px black;
+    transform: translateY(2px);
+  }
+
+  .btn-equal:active {
+    background-color: rgb(212, 92, 12);
+    box-shadow: 3px 3px 8px black;
+    transform: translateY(2px);
+  }
