@@ -20,7 +20,7 @@ export class AppComponent {
 
     // Array and var to store temp numbers
     var numList = [];
-    var logicList = [];
+  const logicList = /[0-9.*/]|-/;
     let tempNum;
     let tempStr!: string;
 
@@ -109,20 +109,29 @@ export class AppComponent {
       inputField!.innerHTML = "";
       outputField!.innerHTML = "";
       numList = [];
-      logicList = [];
     }
 
-    // calculates the string (currently poses a security risk; needs validation to prevent JS injection)
+    // calculates the string (validation included)
     else if (clicked == "=" && outputFieldTxt != null && inputFieldTxt != null) {
       outputFieldTxt = outputFieldTxt.replace(/x/g, "*");
       outputFieldTxt = outputFieldTxt.replace(/÷/g, "/");
 
 
       tempInputField = eval((outputFieldTxt + inputFieldTxt));
-      tempInputField = document.createTextNode(tempInputField);
-      outputField!.innerHTML = "";
-      inputField!.innerHTML = "";
-      inputField?.appendChild(tempInputField);
+      if (logicList.test(tempInputField)) {
+        tempInputField = document.createTextNode(tempInputField);
+        outputField!.innerHTML = "";
+        inputField!.innerHTML = "";
+        numList = [];
+        inputField?.appendChild(tempInputField);
+      }
+      else {
+        alert("ERROR: Unauthorized input found!");
+        outputField!.innerHTML = "";
+        inputField!.innerHTML = "";
+        numList = [];
+      }
+
     }
   }
 }
