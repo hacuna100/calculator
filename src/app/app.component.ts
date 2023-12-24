@@ -53,6 +53,7 @@ export class AppComponent {
       }
     }
 
+    // converts number from positive to negative and in reserve
     else if (clicked == "+/-") {
       if (inputFieldTxt != null && inputFieldTxt != "") {
         if (inputFieldTxt.includes("-")) {
@@ -71,6 +72,8 @@ export class AppComponent {
       }
     }
 
+    // appends a logic operator to the string after inputting a number
+    // allows to change operator if needed until a new number is inputted
     else if (['÷','+','-','x'].includes(clicked)) {
       if (inputFieldTxt != null && inputFieldTxt != "") {
         tempNum =  parseFloat(inputFieldTxt);
@@ -96,10 +99,12 @@ export class AppComponent {
       }
     }
 
+    // clears the current input field (not the previous inputs)
     else if (clicked == "AC") {
       inputField!.innerHTML = "";
     }
 
+    // clears all inputs;
     else if (clicked == "C") {
       inputField!.innerHTML = "";
       outputField!.innerHTML = "";
@@ -107,6 +112,7 @@ export class AppComponent {
       logicList = [];
     }
 
+    // calculates the string (currently poses a security risk; needs validation to prevent JS injection)
     else if (clicked == "=" && outputFieldTxt != null && inputFieldTxt != null) {
       outputFieldTxt = outputFieldTxt.replace(/x/g, "*");
       outputFieldTxt = outputFieldTxt.replace(/÷/g, "/");
