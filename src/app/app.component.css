@@ -8,7 +8,7 @@
     border-radius: 15px;
   }
 
-  .inputs {
+  .calc-cont {
     height: 75px;
     width: 280px;
     margin: auto;
@@ -17,6 +17,33 @@
     margin-top: 10px;
     border-radius: 10px;
   }
+
+  .inputs {
+    text-align: right;
+    float: right;
+    height: 40px;
+    margin-top: 10px;
+    width: 255px;
+    padding-right: 10px;
+    font-size: x-large;
+    background-color: rgb(59, 58, 58);
+    border: 0;
+    color: rgb(214, 214, 214);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ .outputs {
+    text-align: right;
+    float: right;
+    height: 25px;
+    width: 255px;
+    padding-right: 10px;
+    font-size: medium;
+    background-color: rgb(59, 58, 58);
+    border: 0;
+    color: rgb(168, 168, 168);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+ }
 
   .flex-row {
     display: flex;
@@ -69,19 +96,6 @@
     color: rgb(214, 214, 214);
     cursor: pointer;
   }
-
-  .field {
-    text-align: right;
-    float: right;
-    height: 40px;
-    margin-top: 10px;
-    width: 255px;
-    padding-right: 10px;
-    font-size: x-large;
-    background-color: rgb(59, 58, 58);
-    border: 0;
-    color: rgb(214, 214, 214);
- }
 
  input.field:focus {
     outline-width: 0;
